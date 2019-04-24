@@ -1,0 +1,202 @@
+@import "fonts.scss";
+
+/*Breakpoint definition*/
+$small: 767px;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 20px;
+}
+
+li {
+  list-style-type: none;
+}
+
+/*Global form styles*/
+
+label {
+  display: block;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+}
+textarea {
+  width: 100%;
+  border: 1px solid lightgray;
+}
+.sm-hidden {
+  display: none;
+}
+
+.form-group-item {
+  display: flex;
+  justify-content: space-between;
+
+  .form-item {
+    width: 48%;
+  }
+}
+.form-item {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.form-submit {
+  padding: 10px;
+  border: none;
+  background: orange;
+  width: 20%;
+  font-weight: bold;
+}
+
+.form-wrapper {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: lightgray;
+
+  label.error {
+    color: red;
+  }
+
+  /*Component related styles*/
+
+  &__header {
+    display: flex;
+    flex-basis: 100%;
+    justify-content: center;
+    background: blue;
+    height: 80px;
+    color: white;
+    line-height: 70px;
+    position: relative;
+    flex-wrap: wrap;
+
+    &__icon {
+      width: 60px;
+      height: 50px;
+      padding-left: 10px;
+    }
+    &__content {
+      padding-left: 10px;
+      font-size: 22px;
+    }
+    &__button {
+      right: 0;
+      margin-left: auto;
+      padding-right: 10%;
+
+      .g-button {
+        padding: 10px;
+        border: 2px solid orange;
+      }
+      &.isOpen {
+        padding-right: 2%;
+        .g-button {
+          border: none;
+        }
+      }
+      &.isClosed {
+        .g-button {
+          padding: 10px;
+          border: 2px solid orange;
+        }
+      }
+    }
+  }
+
+  &__holder {
+    flex-basis: 100%;
+    display: none;
+    background: #fff;
+  }
+}
+
+//Responsive CSS for Mobile
+
+@media screen and (max-width: $small) {
+  /*Global hidden style*/
+  .sm-hidden {
+    display: block;
+  }
+
+  /*Global form mobile steps*/
+  .form-group-item {
+    flex-wrap: wrap;
+    .form-item {
+      flex-basis: 100%;
+      width: 100%;
+    }
+  }
+  .form-submit {
+    width: 100%;
+  }
+
+  /*Component based mobile styles*/
+
+  .form-wrapper {
+    width: 100%;
+
+    &__header {
+      min-height: 200px;
+      flex-direction: column;
+      text-align: center;
+
+      &__icon {
+        margin-bottom: 20px;
+        margin-top: 20px;
+        position: relative;
+        margin: 0 auto;
+      }
+      &__content {
+        line-height: 25px;
+        margin-top: 20px;
+      }
+      &__button {
+        padding-right: 0;
+        .g-button {
+          padding: 10px;
+          border: 2px solid orange;
+        }
+        &.isOpen {
+          margin-left: 0;
+          position: absolute;
+		  transform: translateY(-100%);
+		
+        }
+        &.isClosed {
+          margin-left: 0;
+		  position: relative;
+		  .g-button{
+			padding: 10px 100px 10px 100px;
+		  }
+        }
+	    margin-left: 0;
+      }
+    }
+
+    &__holder {
+      width: 80%;
+      margin: 0 auto;
+      margin-top: -30px;
+      z-index: 1;
+      padding: 15px;
+      flex-basis: 80%;
+    }
+  }
+}

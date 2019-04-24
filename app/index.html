@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Boilerplate</title>
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/main.css">
+
+
+</head>
+
+<body>
+
+	<div class="form-wrapper">
+		<div class="form-wrapper__header">
+			<div class="form-wrapper__header__icon ">
+				<img src="http://www.sclance.com/pngs/white-logo-png/white_logo_png_1512381.png" alt="icon" />
+			</div>
+			<div class="form-wrapper__header__content ">
+				<p>Need more help?<br class="sm-hidden" /> Please contact us</p>
+			</div>
+			<div class="form-wrapper__header__button">
+				<a class="g-button">Get in touch</a>
+			</div>
+		</div>
+		<div class="form-wrapper__holder">
+			<form action="" id="contact_form" class="form-wrapper__holder__content">
+				<div class="form-group-item">
+					<div class="form-item">
+						<label for="firstname">*First Name</label>
+						<input id="firstname" type="text" name="firstname" maxlength="50">
+					</div>
+					<div class="form-item">
+						<label for="lastname">*Last Name</label>
+						<input id="lastname" type="text" name="lastname" maxlength="50">
+					</div>
+
+
+
+
+				</div>
+
+				<div class="form-item">
+					<label for="email">*Email Address</label>
+					<input id="email" type="email" name="Email" maxlength="50">
+				</div>
+
+				<br />
+				<div class="form-item">
+					<label for="en_option">*Enquiring about</label>
+					<select name="en_option" class="required">
+						<option value="">Select an option</option>
+						<option value="one">one</option>
+						<option value="two">Two</option>
+						<option value="three">Three</option>
+						<option value="four">Four</option>
+					</select>
+				</div>
+				<br />
+
+				<div class="form-item">
+					<label for="message">*Message</label>
+					<textarea id="message" name="Message" rows="10" maxlength="6000" required></textarea>
+				</div>
+
+
+				<br />
+
+				<button class="form-submit" type="submit">Submit</button>
+			</form>
+		</div>
+	</div>
+
+<!--Script addition-->
+	<script src="js/libs.min.js"></script>
+	<script src="js/common.js"></script>
+	<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+</body>
+
+</html>
